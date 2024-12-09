@@ -1,0 +1,6 @@
+docker build -t time_series_kang:0 .
+
+-d分离模式，-p端口，-v挂载，-it交互式终端，--gpus all使用全部gpu
+docker run -d -p  127.0.0.1:8888:8080 -v /home/csu/data/tsfproj:/workspace --gpus all -it --name try1 docker.io/pytorch/pytorch:2.4.0-cuda12.1-cudnn9-devel
+
+docker run -d -v /home/csu/data/tsfproj:/workspace --gpus all -it --name exp1 time_series_kang:0
